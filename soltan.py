@@ -20,7 +20,7 @@ logger = logging.getLogger(__name__)
 # ==============================================================================
 # 💡 Configuration 💡
 # ==============================================================================
-TELEGRAM_BOT_TOKEN = "8147091523:AAFISiRqSe7rkRUQlUxgGIob0UVL2ufN-H4"
+TELEGRAM_BOT_TOKEN = "8379274246:AAHwwB-wsiqxZLVkegeXi0oYqZekotV1FZk"
 GEMINI_API_KEY = "AIzaSyDj_5Ld1f5Hjq7y1AZ4s9Ltw1_JoFNPSEE"
 
 # Forward targets
@@ -229,7 +229,7 @@ Now analyze the image and return all MCQs using the exact format above.
             logger.error(f"Error parsing Gemini response: {e}")
             return None
 
-    def create_answer_image(self, question_data, background_filename="jj1.jpg"):
+    def create_answer_image(self, question_data, background_filename="jj2.jpg"):
         """Create an image with the MCQ answer using background image"""
         try:
             # Load background image
@@ -246,7 +246,7 @@ Now analyze the image and return all MCQs using the exact format above.
             draw = ImageDraw.Draw(image)
             
             # Colors
-            text_color = (0, 0, 0)  # Black
+            text_color = (255, 255, 255)
             
             # Calculate font sizes based on image size
             if bg_width > 500:
